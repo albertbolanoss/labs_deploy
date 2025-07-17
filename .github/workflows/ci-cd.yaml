@@ -52,6 +52,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:latest # Etiqueta 'latest'
-            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:${{ github.sha }} # Etiqueta con el SHA del commit (para versiones únicas)
-            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:${{ github.run_number }} # Etiqueta con el número de ejecución del workflow (otra opción para versiones)
+            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:latest
+            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:${{ github.run_number }}
