@@ -15,4 +15,7 @@ docker push luigisamurai/lab-deploy:0.1.0
 ```bash
 # Start ArgoCD Server
 kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+# Apply the ArgoCD application.yaml
+kubectl apply -f chart/application.yaml -n argocd
 ```
