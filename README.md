@@ -18,4 +18,5 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 # Apply the ArgoCD application.yaml
 kubectl apply -f chart/application.yaml -n argocd
+kubectl describe pod guestbook-spring-boot-app-c8b7c9bd6-tvvzw -n guestbook
 ```
