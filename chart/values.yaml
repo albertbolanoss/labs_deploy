@@ -1,0 +1,26 @@
+
+image:
+  repository: luigisamurai/lab-deploy
+  tag: 0.1.0
+  pullPolicy: IfNotPresent # Always, IfNotPresent, Never
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 80 # Puerto que el servicio de Kubernetes expondrá
+  targetPort: 8080 # Puerto en el que tu aplicación Spring Boot escucha dentro del contenedor
+
+# Valores para ConfigMap (configuraciones no sensibles)
+config:
+  welcomeMessage: "¡Hola desde Spring Boot en Kubernetes!"
+  environment: "development"
+  logLevel: "INFO"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi

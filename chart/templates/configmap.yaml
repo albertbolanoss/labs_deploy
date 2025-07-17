@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "spring-boot-app.fullname" . }}-config
+  labels:
+    {{- include "spring-boot-app.labels" . | nindent 4 }}
+data:
+  welcomeMessage: {{ .Values.config.welcomeMessage | quote }}
+  environment: {{ .Values.config.environment | quote }}
+  logLevel: {{ .Values.config.logLevel | quote }}
