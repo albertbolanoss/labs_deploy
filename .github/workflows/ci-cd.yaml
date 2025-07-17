@@ -65,5 +65,3 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/lab-deploy:latest
-            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:${{ github.sha }}
-            ${{ secrets.DOCKER_USERNAME }}/lab-deploy:${{ github.run_number }}

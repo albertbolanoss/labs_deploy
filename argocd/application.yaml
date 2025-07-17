@@ -10,8 +10,8 @@ spec:
   project: default
   source:
     path: chart
-    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
-    targetRevision: master
+    repoURL: "https://github.com/albertbolanoss/labs_deploy.git"
+    targetRevision: main
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
